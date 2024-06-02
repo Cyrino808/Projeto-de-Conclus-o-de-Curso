@@ -27,10 +27,11 @@ O servidor estará rodando na porta 8000. Você pode acessar a aplicação atrav
 http://localhost:8000
 
 Estrutura do Projeto
-index.js: Arquivo principal que configura e inicia o servidor Express, define rotas e manipula a lógica principal da aplicação.
-public/: Diretório para arquivos estáticos (CSS, JS, imagens).
-views/: Diretório para templates EJS.
 
+index.js: Arquivo principal que configura e inicia o servidor Express, define rotas e manipula a lógica principal da aplicação.
+arquivos/: Diretório para arquivos auxiliares.
+tabelas/: Diretório para tabelas de dados publicos. 
+views/: Diretório para templates EJS.
 ocr.cjs: Módulo para funções de OCR.
 orçamento_campinas.cjs: Módulo para funções específicas relacionadas ao orçamento de Campinas.
 
