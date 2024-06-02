@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informações da cidade</title>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+</head>
+<body>
+    <h1>População da Cidade de <%= nome %></h1>
+    <p id="cidade"></p>
+    <p id="cidade-pais"></p>
+    <p id="cidade-regiao"></p>
+    <p id="cidade-estado"></p>
+</br>
+</br>
+</br>
+</br>
+    <div id="grafico"></div>
+</br>
+</br>
+</br>
+</br>
+<h1>PIB da Cidade de <%= nome %></h1>
+<p id="cidade_pib"></p>
+<p id="cidade-pais_pib"></p>
+<p id="cidade-regiao_pib"></p>
+<p id="cidade-estado_pib"></p>
+</br>
+</br>
+</br>
+</br>
+<div id="grafico_pib"></div>
+
+    <script>
+    const nome_cidade = "<%= nome %>"
+    let dados = "<%= dados %>";
+    let dados_pib = "<%= dados_pib %>";
+    console.log(dados_pib)
+    dados = dados.split(",").map(Number);
+    dados_pib = dados_pib.split(",").map(Number);
+
+    document.getElementById('cidade').textContent = `${nome_cidade} cresceu ${"<%= crescimento_cidade_po %>"}% entre 2001 e 2019.`;
+    document.getElementById('cidade-pais').textContent = `${nome_cidade} cresceu ${"<%= comparacao_pais %>"}%, mais que o Brasil.`;
+    document.getElementById('cidade-regiao').textContent = `${nome_cidade} cresceu mais que a região ${"<%= comparacao_regiao %>"}%.`;
+    document.getElementById('cidade-estado').textContent = `${nome_cidade} cresceu mais que o estado ${"<%= comparacao_estado %>"}%.`;
+
+    document.getElementById('cidade_pib').textContent = `${nome_cidade} cresceu ${"<%= crescimento_cidade_pib %>"}% entre 2001 e 2019.`;
+    document.getElementById('cidade-pais_pib').textContent = `${nome_cidade} cresceu ${"<%= comparacao_pais_p %>"}%, mais que o Brasil.`;
+    document.getElementById('cidade-regiao_pib').textContent = `${nome_cidade} cresceu mais que a região ${"<%= comparacao_regiao_p %>"}%.`;
+    document.getElementById('cidade-estado_pib').textContent = `${nome_cidade} cresceu mais que o estado ${"<%= comparacao_estado_p %>"}%.`;
+        
+        
+        let anos = Array.from({ length: 19 }, (_, i) => (2001 + i).toString()); // Corrigido aqui
+
+        // Carregar a biblioteca do Google Charts
+        google.charts.load('current', { packages: ['corechart'] });
+        google.charts.setOnLoadCallback(desenharGrafico);
+
+        // Função para desenhar o gráfico
+        function desenharGrafico() {
+            var data = google.visualization.arrayToDataTable([
+                ['Ano', 'População'],
+                ...anos.map((ano, index) => [ano, dados[index]])
+            ]);
+
+            var options = {
+                title: 'População da cidade de <%= nome %>, entre 2001 e 2019',
+                curveType: 'function',
+                legend: { position: 'bottom' }
+            };
+
+            var chart = new google.visualization.LineChart(document.getElementById('grafico'));
+            chart.draw(data, options);
+        }
+
+
+
+
+
+let anos_pib = Array.from({ length: 20 }, (_, i) => (2002 + i).toString()); // Corrigido aqui
+
+// Carregar a biblioteca do Google Charts
+google.charts.load('current', { packages: ['corechart'] });
+google.charts.setOnLoadCallback(desenharGrafico_pib);
+
+// Função para desenhar o gráfico
+function desenharGrafico_pib() {
+    var data = google.visualization.arrayToDataTable([
+        ['Ano', 'PIB'],
+        ...anos_pib.map((anos_pib, index) => [anos_pib, dados_pib[index]*1000])
+    ]);
+
+    var options = {
+        title: 'PIB da cidade de <%= nome %>, entre 2001 e 2021',
+        curveType: 'function',
+        legend: { position: 'bottom' },
+        series: {
+            0: { color: '#FF0000' }  // Altere '#FF0000' para a cor desejada
+        }
+    };
+
+    var chart = new google.visualization.LineChart(document.getElementById('grafico_pib'));
+    chart.draw(data, options);
+}
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Busca de Deputados por Nome e Partido</title>
+</head>
+<body>
+    <h1>Buscar Deputados por Nome e Partido</h1>
+    <input type="text" id="nameInput" placeholder="Digite o nome do deputado" onkeyup="filterDeputados()">
+    <input type="text" id="partyInput" placeholder="Digite a sigla do partido" onkeyup="filterDeputados()">
+    <input type="text" id="stateInput" placeholder="Digite a sigla do estado" onkeyup="filterDeputados()">
+    <ul id="resultList"></ul>
+
+    <!-- Formulário com campo oculto para capturar a seleção do usuário -->
+    <form id="deputadoForm" action="/lista_deputados" method="post">
+        <input type="hidden" id="selectedDeputadoid" name="deputado_selecionado_id" value="">
+        <input type="hidden" id="selectedDeputadoname" name="deputado_selecionado_nome" value="">
+        <input type="hidden" id="estado" name="estado" value="">
+    </form>
+
+    <script>
+        let deputados = "<%= deputados %>"; // Mock data, substitua por "<%= deputados %>" conforme o seu caso
+        deputados = deputados.split(',');
+        console.log(deputados[0])
+        let deputados_partido = [];
+
+        for (let i = 0; i < deputados.length; i++) {
+            let aux1 = deputados[i].split('/');
+            deputados_partido.push({
+                id: aux1[0].trim(),
+                nome: aux1[1].trim(),
+                siglaPartido: aux1[2].trim(),
+                siglaEstado: aux1[3].trim()
+            });
+        }
+
+        function filterDeputados() {
+            var nameInput = document.getElementById('nameInput').value.toUpperCase();
+            var partyInput = document.getElementById('partyInput').value.toUpperCase();
+            var stateInput = document.getElementById('stateInput').value.toUpperCase();
+            var resultList = document.getElementById('resultList');
+
+            resultList.innerHTML = ''; // Clear previous results
+
+            // Filter deputados by nome and partido
+            deputados_partido.forEach(function(deputado) {
+                if (deputado.nome.toUpperCase().includes(nameInput) && deputado.siglaPartido.toUpperCase().includes(partyInput) && deputado.siglaEstado.toUpperCase().includes(stateInput)) {
+                    var li = document.createElement('li');
+                    li.textContent = deputado.nome + ' - ' + deputado.siglaPartido + ' - ' + deputado.siglaEstado ;
+                    li.style.cursor = 'pointer';
+                    li.onclick = function() {
+                        document.getElementById('selectedDeputadoid').value = deputado.id; // Set hidden field value
+                        document.getElementById('selectedDeputadoname').value = deputado.nome; // Set hidden field value
+                        document.getElementById('estado').value = deputado.siglaEstado; // Set hidden field value
+                        // Optionally submit the form here or do other actions
+                        document.getElementById('deputadoForm').submit();
+                        //alert('Selecionado: ' + deputado.nome); // Just for demonstration
+                    };
+                    resultList.appendChild(li);
+                }
+            });
+        }
+    </script>
+</body>
+</html>

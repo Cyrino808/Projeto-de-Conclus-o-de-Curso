@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Botões Dinâmicos</title>
+    <style>
+        #buttonContainer button {
+            display: block;  /* Faz o botão ocupar a linha inteira */
+            width: 100%;     /* Estende o botão para a largura completa do container */
+            margin-bottom: 5px; /* Adiciona um pequeno espaço entre os botões */
+        }
+    </style>
+</head>
+<body>
+    <h1>Gerador de Botões Dinâmico</h1>
+    <form action="/lista_vereadores" method="post">
+        <input type="hidden" name="botaoClicado" id="botaoClicado" value=""> <!-- Campo oculto para armazenar o nome do botão clicado -->
+        <div id="buttonContainer"></div> <!-- Container onde os botões serão adicionados -->
+    </form>
+
+    <script>
+        let numero_botões = "<%= numero %>";
+        let vereadores = "<%= vereadores %>";
+        vereadores = vereadores.split(',');
+
+        // Função para criar botões
+        function createButtons(numButtons) {
+            const container = document.getElementById('buttonContainer');
+            container.innerHTML = ''; // Limpar conteúdo existente
+
+            for (let i = 0; i < numButtons; i++) {
+                const button = document.createElement('button'); // Cria um novo elemento botão
+                button.innerText = vereadores[i]; // Define o texto do botão
+                button.id = vereadores[i].replace(/\s+/g, '-'); // Substitui espaços por hifens para garantir IDs válidos
+                button.name = vereadores[i]; // Atribui o nome
+                button.type = "button"; // Alterado para 'button' para evitar submissão automática
+                button.onclick = function() {
+                    document.getElementById('botaoClicado').value = this.name; // Atualiza o campo oculto com o nome do botão clicado
+                    this.form.submit(); // Submete o formulário manualmente
+                };
+                container.appendChild(button); // Adiciona o botão ao container
+            }
+        }
+
+        createButtons(numero_botões);
+    </script>
+</body>
+</html>

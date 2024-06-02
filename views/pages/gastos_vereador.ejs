@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gastos do Vereador</title>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+</head>
+<body>
+    <h1>Estes foram os gastos do vereador <%= nome_vereador %> com combustível</h1>
+    <div id="totalsContainer"></div> <!-- Container para os totais de gastos -->
+    <div id="chartContainer" style="width: 1500px; height: 700px;"></div>
+
+    <script>
+        google.charts.load('current', {'packages':['corechart']});
+        google.charts.setOnLoadCallback(drawChart);
+
+        let combustivelData = "<%= combustivel %>";
+        let combustivel = combustivelData.split(','); // Split the string into an array
+        
+        function drawChart() {
+            var data = new google.visualization.DataTable();
+            data.addColumn('string', 'Mês');
+            const yearNames = ["2021", "2022", "2023", "2024"]; // Nomes dos anos para colunas
+            yearNames.forEach(year => data.addColumn('number', year)); // Adiciona uma coluna para cada ano
+
+            const monthNames = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", 
+                                "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"];
+            let totals = yearNames.map(() => 0); // Initialize totals for each year
+
+            monthNames.forEach((month, index) => {
+                let row = [month];
+                yearNames.forEach((_, yearIndex) => {
+                    let value = parseFloat(combustivel[yearIndex * 12 + index]);
+                    row.push(value);
+                    if(value){
+                        totals[yearIndex] += value;
+                    }
+                    
+                });
+                data.addRow(row);
+            });
+
+            var options = {
+                title: 'Gastos Mensais do Vereador <%= nome_vereador %> por Ano, com Combustível',
+                chartArea: {width: '60%', height: '75%'},
+                hAxis: {
+                    title: 'Meses',
+                },
+                vAxis: {
+                    title: 'Valor Gasto',
+                },
+            };
+
+            var chart = new google.visualization.ColumnChart(document.getElementById('chartContainer'));
+            chart.draw(data, options);
+
+            // Cálculo e exibição dos totais
+            let totalsContainer = document.getElementById('totalsContainer');
+            totals.forEach((total, index) => {
+                let totalElement = document.createElement('h4');
+                totalElement.innerText = `Total de gastos ${yearNames[index]}: R$ ${total.toFixed(2)}`;
+                totalsContainer.appendChild(totalElement);
+            });
+        }
+    </script>
+</body>
+</html>

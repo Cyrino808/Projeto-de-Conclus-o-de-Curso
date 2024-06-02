@@ -1,0 +1,41 @@
+{
+  "name": "tcc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/core": "^7.24.5",
+    "@babel/preset-env": "^7.24.5",
+    "@google-cloud/common": "^5.0.2",
+    "@google/generative-ai": "^0.11.3",
+    "axios": "^1.7.2",
+    "axios-cookiejar-support": "^5.0.1",
+    "better-queue": "^3.8.12",
+    "canvas": "^2.11.2",
+    "cheerio": "^1.0.0-rc.12",
+    "ejs": "^3.1.10",
+    "express": "^4.19.2",
+    "fs": "^0.0.1-security",
+    "natural": "^7.0.5",
+    "node-fetch": "^2.7.0",
+    "nodemon": "^3.1.0",
+    "pdf-lib": "^1.17.1",
+    "pdf-parse": "^1.1.1",
+    "pdf-to-png-converter": "^3.2.0",
+    "pdf2pic": "^3.1.1",
+    "pdfjs-dist": "^4.2.67",
+    "queue": "^7.0.0",
+    "request": "^2.88.2",
+    "request-promise-native": "^1.0.9",
+    "sharp": "^0.33.4",
+    "tesseract.js": "^5.1.0",
+    "xlsx": "^0.18.5"
+  }
+}
