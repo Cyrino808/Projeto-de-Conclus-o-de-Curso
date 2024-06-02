@@ -37,7 +37,9 @@ orçamento_campinas.cjs: Módulo para funções específicas relacionadas ao or�
 
 Dependências Principais
 express: Framework web para Node.js.
+
 ejs: Motor de templates para gerar HTML.
+
 path: Módulo para manipulação de caminhos de arquivos.
 http e https: Módulos para criação de servidores HTTP e HTTPS.
 XLSX: Biblioteca para manipulação de arquivos Excel.
