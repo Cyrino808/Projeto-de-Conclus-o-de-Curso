@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orçamento da cidade de Campinas-SP</title>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+        google.charts.load('current', {'packages':['corechart']});
+        google.charts.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+            let gasto = "<%= dados %>";
+            gasto = gasto.split("*");
+
+            let dataArray = [['Tipo de Renda', 'Valor']];
+            for (let i = 0; i < gasto.length; i++) {
+                if (gasto[i]) {
+                    let aux = gasto[i].split("!");
+                    let titulo = aux[0] === "OUTROS" ? "Other" : aux[0];
+                    let valor = parseFloat(aux[1]);
+                    if (valor > 0) {
+                        dataArray.push([titulo, valor]);
+                    }
+                }
+            }
+
+            let data = google.visualization.arrayToDataTable(dataArray);
+
+            let options = {
+                title: 'Detalhamento de gastos',
+                width: '100%',
+                height: 700,
+                pieHole: 0.4,
+                pieSliceText: 'label',
+                legend: { position: 'right', alignment: 'center' },
+                chartArea: { left: 50, top: 50, width: '80%', height: '80%' },
+                tooltip: { trigger: 'selection' },
+                colors: ['#3366CC', '#DC3912', '#FF9900', '#109618', '#990099', '#3B3EAC', '#0099C6', '#DD4477', '#66AA00', '#B82E2E', '#316395', '#994499', '#22AA99', '#AAAA11', '#6633CC', '#E67300', '#8B0707', '#651067', '#329262', '#5574A6', '#3B3EAC']
+            };
+
+            let chart = new google.visualization.PieChart(document.getElementById('chartContainer'));
+            chart.draw(data, options);
+        }
+    </script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            height: 100vh;
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        h1 {
+            color: #333;
+            font-size: 24px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        #chartContainer {
+            width: 100%;
+            max-width: 1200px;
+            height: 700px;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Detalhes do gasto: <%= titulo %> </h1>
+    <div id="chartContainer"></div>
+</body>
+</html>

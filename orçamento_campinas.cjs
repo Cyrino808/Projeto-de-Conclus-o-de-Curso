@@ -169,14 +169,23 @@ function formatCurrencyString(dados) {
 ]
   */
 
-gastos_campinas()
-async function gastos_campinas() {
+async function main(index,tipogasto){
     // Carregar o arquivo Excel
     const workbook = XLSX.readFile("C:/Users/vinim/OneDrive/Área de Trabalho/TCC/tabelas/Despesas_campinas_2023.csv");
     // Suponha que os dados estão na primeira aba da planilha
     const worksheet = workbook.Sheets[workbook.SheetNames[0]];
     // Converter dados da planilha para JSON
     const dados = XLSX.utils.sheet_to_json(worksheet, { header: 1 });
+
+    if(index == 1){
+        return (await gastos_campinas(dados)) 
+    }else{
+        return (await pega_gasto_categoria(dados,tipogasto))
+    }
+}
+
+async function gastos_campinas(dados) {
+    
 
     let total = 0;
     let gasto = [];
@@ -207,8 +216,6 @@ async function gastos_campinas() {
     return receitaArray
 }
 
-
-
 async function pega_gasto_categoria(dados,tipogasto){
     let total = 0;
     let gasto = [];
@@ -235,13 +242,17 @@ async function pega_gasto_categoria(dados,tipogasto){
 
     let receitaArray = Object.entries(gastoPorCategoria);
     receitaArray.sort((a, b) => b[1] - a[1]);
+    let formatado = ''
+    for(let i=0;i<receitaArray.length;i++){
+        formatado = formatado + receitaArray[i][0] + "!" + receitaArray[i][1] + "*"
+    }
 
-    return receitaArray
+
+    return formatado
 }
 
 
 module.exports = {
     receitas_campinas:receitas_campinas,
-    gastos_campinas:gastos_campinas,
-    pega_gasto_categoria:pega_gasto_categoria
+    gastos_campinas:main,
   };

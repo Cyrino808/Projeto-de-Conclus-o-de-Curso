@@ -4,12 +4,62 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Busca de Deputados por Nome e Partido</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .input-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .input-container input {
+            width: 300px;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        #resultList {
+            list-style-type: none;
+            padding: 0;
+            margin-top: 20px;
+            width: 100%;
+            max-width: 400px;
+        }
+        #resultList li {
+            background-color: #fff;
+            margin: 5px 0;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        #resultList li:hover {
+            background-color: #e0e0e0;
+        }
+    </style>
 </head>
 <body>
     <h1>Buscar Deputados por Nome e Partido</h1>
-    <input type="text" id="nameInput" placeholder="Digite o nome do deputado" onkeyup="filterDeputados()">
-    <input type="text" id="partyInput" placeholder="Digite a sigla do partido" onkeyup="filterDeputados()">
-    <input type="text" id="stateInput" placeholder="Digite a sigla do estado" onkeyup="filterDeputados()">
+    <div class="input-container">
+        <input type="text" id="nameInput" placeholder="Digite o nome do deputado" onkeyup="filterDeputados()">
+        <input type="text" id="partyInput" placeholder="Digite a sigla do partido" onkeyup="filterDeputados()">
+        <input type="text" id="stateInput" placeholder="Digite a sigla do estado" onkeyup="filterDeputados()">
+    </div>
     <ul id="resultList"></ul>
 
     <!-- Formulário com campo oculto para capturar a seleção do usuário -->
@@ -48,7 +98,6 @@
                 if (deputado.nome.toUpperCase().includes(nameInput) && deputado.siglaPartido.toUpperCase().includes(partyInput) && deputado.siglaEstado.toUpperCase().includes(stateInput)) {
                     var li = document.createElement('li');
                     li.textContent = deputado.nome + ' - ' + deputado.siglaPartido + ' - ' + deputado.siglaEstado ;
-                    li.style.cursor = 'pointer';
                     li.onclick = function() {
                         document.getElementById('selectedDeputadoid').value = deputado.id; // Set hidden field value
                         document.getElementById('selectedDeputadoname').value = deputado.nome; // Set hidden field value

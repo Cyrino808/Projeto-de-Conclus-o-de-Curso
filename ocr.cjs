@@ -43,7 +43,7 @@ async function downloadPDF(url) {
 async function pdf_to_image() {
 
   try{
-    const pngPage = await pdfToPng("C:/Users/vinim/OneDrive/Área de Trabalho/TCC/document.pdf", {
+    const pngPage = await pdfToPng("C:/Users/vinim/OneDrive/Área de Trabalho/TCC/arquivos/document.pdf", {
       disableFontFace: false,
       useSystemFonts: false,
       pagesToProcess: [1],
@@ -73,7 +73,7 @@ async function main() {
         const pdfData = await downloadPDF(url[i]);
         if(pdfData != "Erro na url"){
        
-          const pdfPath = `${caminho}/document.pdf`;
+          const pdfPath = `${caminho}/arquivos/document.pdf`;
           fs.writeFileSync(pdfPath, pdfData);
           const imagem = await pdf_to_image();
 

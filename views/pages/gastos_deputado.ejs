@@ -3,81 +3,105 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gastos do Vereador</title>
+    <title>Gastos do Deputado</title>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        h4 {
+            background-color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            width: fit-content;
+            margin-bottom: 10px;
+        }
+        #chart_div {
+            width: 80%;
+            max-width: 1200px;
+            height: 600px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+    </style>
 </head>
 <body>
     <h1>Estes foram os gastos do deputado <%= nome_deputado %></h1>
-    <h4 id="totalGastos2023"></h4> <!-- Local para exibir o total dos gastos de 2023 -->
-    <h4 id="totalGastos2024"></h4> <!-- Local para exibir o total dos gastos de 2024 -->
+    <h4 id="totalGastos2023"></h4>
+    <h4 id="totalGastos2024"></h4>
     <div id="chart_div"></div>
-    <br>
-    <br>
-    <h4 id="voos"></h4> <!-- Local para os voos do deputado -->
 </body>
 
 <script>
     google.charts.load('current', {'packages':['corechart']});
     google.charts.setOnLoadCallback(drawChart);
-    
+
     function drawChart() {
-        let gastos2023 = "<%= gastos2023 %>"; // Exemplo: "Passagem Aérea Nacional/3000!Passagem Aérea Internacional/5000!Passagem Aérea Regional/2000"
-        let gastos2024 = "<%= gastos2024 %>"; // Exemplo: "Passagem Aérea Nacional/2500!Passagem Aérea Internacional/4500!Passagem Aérea Regional/1500"
-        let lista_voos = "<%= lista_voos %>"
-        document.getElementById('voos').textContent = `Total dos Gastos 2024: R$ ${lista_voos.toLocaleString()}`;
-    
+        let gastos2023 = "<%= gastos2023 %>";
+        let gastos2024 = "<%= gastos2024 %>";
+
         let gastosAgrupados = {};
-        let totais = {2023: 0, 2024: 0}; // Armazenar totais para cada ano
-    
+        let totais = {2023: 0, 2024: 0};
+
         processarGastos(gastos2023, 2023, gastosAgrupados, totais);
         processarGastos(gastos2024, 2024, gastosAgrupados, totais);
-    
+
         let data = new google.visualization.DataTable();
         data.addColumn('string', 'Categoria');
         data.addColumn('number', '2023');
         data.addColumn('number', '2024');
-    
+
         Object.keys(gastosAgrupados).forEach(function(categoria) {
             data.addRow([categoria, gastosAgrupados[categoria][2023] || 0, gastosAgrupados[categoria][2024] || 0]);
         });
-    
+
         let options = {
             title: 'Gastos do Deputado por Categoria e Ano',
-            width: 2000,
-            height: 1000,
             legend: { position: 'top' },
             hAxis: { title: 'Categorias' },
             vAxis: { title: 'Valor' },
-            bars: 'group'
+            bars: 'group',
+            chartArea: { width: '70%', height: '70%' },
+            height: 500
         };
-    
+
         let chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));
         chart.draw(data, options);
-    
+
         document.getElementById('totalGastos2023').textContent = `Total dos Gastos 2023: R$ ${totais[2023].toLocaleString()}`;
         document.getElementById('totalGastos2024').textContent = `Total dos Gastos 2024: R$ ${totais[2024].toLocaleString()}`;
     }
-    
+
     function processarGastos(gastos, ano, gastosAgrupados, totais) {
         let listaGastos = gastos.split('!');
         listaGastos.forEach(function(item) {
             let [categoria, valor] = item.split('/');
             valor = parseFloat(valor);
-            // Normalizar a categoria de passagens aéreas
             if (categoria.includes("PASSAGEM AÉREA")) {
                 categoria = "Passagem Aérea";
             }
             if (!gastosAgrupados[categoria]) {
                 gastosAgrupados[categoria] = {2023: 0, 2024: 0};
             }
-            if(valor){
+            if(valor) {
                 gastosAgrupados[categoria][ano] += valor;
-            totais[ano] += valor; // Somar ao total do ano
+                totais[ano] += valor;
             }
-           
         });
     }
-    </script>
-    
-    
+</script>
 </html>

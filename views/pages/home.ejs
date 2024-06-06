@@ -3,35 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página com Dois Botões</title>
+    <title>Página Inicial</title>
     <style>
         body {
-            font-family: Arial, sans-serif; /* Define a fonte padrão para o corpo do documento */
-            margin: 20px; /* Adiciona uma margem em volta da página */
-            text-align: center; /* Centraliza o conteúdo textual */
+            font-family: Arial, sans-serif;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+        h1 {
+            text-align: center;
+        }
+        .button-container {
+            text-align: center;
         }
         button {
-            background-color: #4CAF50; /* Cor de fundo dos botões */
-            color: white; /* Cor do texto dos botões */
-            padding: 15px 32px; /* Espaçamento interno dos botões */
-            text-align: center; /* Alinha o texto ao centro */
-            text-decoration: none; /* Remove decorações de texto */
-            display: inline-block; /* Faz os botões se comportarem como elementos em linha, mas permitindo dimensionamento */
-            font-size: 16px; /* Tamanho do texto */
-            margin: 4px 2px; /* Margem em volta dos botões */
-            cursor: pointer; /* Altera o cursor para indicar que é clicável */
-            border: none; /* Remove a borda do botão */
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px 32px;
+            margin: 10px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        button:hover {
+            background-color: #45a049;
+            transform: scale(1.05);
         }
     </style>
 </head>
 <body>
-    <h1>Bem-vindo</h1>
-    <h2>Deseja visualizar as informações de quais legisladores?</h2>
-    <form action="/" method="post">
-    <button type ="submit" id="deputados" name="deputados">Deputados Federias</button>
-    <button type ="submit" id="vereadores" name="vereadores">Vereadores de Campinas-SP</button>
-    <button type ="submit" id="cidades" name="cidades">informações detalhadas de sua cidade</button>
-    <button type ="submit" id="orcamento" name="orcamento">Informações sobre o orçamento de Campinas-SP</button>
-</form>
+    <div>
+        <div class="button-container">
+            <form action="/" method="post">
+                <button type="submit" id="deputados" name="deputados">Deputados Federais</button>
+                <button type="submit" id="vereadores" name="vereadores">Vereadores de Campinas-SP</button>
+                <button type="submit" id="cidades" name="cidades">Informações sobre o PIB e a população de sua cidade</button>
+                <button type="submit" id="orcamento" name="orcamento">Informações sobre o orçamento de Campinas-SP</button>
+            </form>
+        </div>
+    </div>
 </body>
 </html>

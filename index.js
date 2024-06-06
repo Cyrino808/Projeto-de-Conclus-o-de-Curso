@@ -11,6 +11,7 @@ import axios from "axios"
 import * as fs from "fs"
 import funções_ocr from './ocr.cjs';
 import funções_orçamento_campinas from './orçamento_campinas.cjs';
+import senador from './senadores.cjs';
 //funções.pega_imagem()
 const app = express();
 const server = http.createServer(app);
@@ -625,7 +626,7 @@ async function geraAno(ano,codigoIBGE){
 
 async function lerarquivo(){
     try {
-        const data =  fs.readFileSync('lista_deputados.txt', 'utf8');
+        const data =  fs.readFileSync('./arquivos/lista_deputados.txt', 'utf8');
         return data ;
     } catch (err) {
         console.error(err);
@@ -812,13 +813,16 @@ app.get('/lista_deputados',async (req, res) => {
 })
 
 app.get('/gastos_deputados', async (req, res) => {
+    
+   
     const nomedeputado = req.query.deputado; // Captura o nome do deputado a partir da query string
     const iddeputado = req.query.id; // Captura o nome do deputado a partir da query string
     const gastos_2023 =  await pegas_gastos_deputado(iddeputado,2023)
     const gastos_2024 =  await pegas_gastos_deputado(iddeputado,2024)
-    let voos = await deputado(iddeputado)
-    console.log(typeof(voos))
+    //let voos = await deputado(iddeputado)
+    
     //res.render('pages/gastos_deputado.ejs',{nome_deputado:nomedeputado,gastos2023:gastos_2023,gastos2024:gastos_2024,lista_voos:voos});
+    res.render('pages/gastos_deputado.ejs',{nome_deputado:nomedeputado,gastos2023:gastos_2023,gastos2024:gastos_2024});
 })
 
 app.get('/home_cidades',async (req, res) => {
@@ -865,17 +869,29 @@ app.get('/cidade',async (req, res) => {
 
 app.get('/orcamento', async (req, res) => {
     let renda = await funções_orçamento_campinas.receitas_campinas()
-    let gasto = await funções_orçamento_campinas.gastos_campinas()
+    let gasto = await funções_orçamento_campinas.gastos_campinas(1,"")
     res.render('pages/orçamento.ejs',{renda:renda,gasto:gasto})
 })
 
 app.post('/orcamento', async (req, res) => {
-
     res.redirect("/gastos_detalhados")
 })
 
 app.get('/gastos_detalhados', async (req, res) => {
-    res.render('pages/orçamento.ejs',{gasto:gasto})
+    let gasto = await funções_orçamento_campinas.gastos_campinas(1,"")
+    let titulo = ''
+
+    for(let i=0; i<gasto.length; i++){
+        titulo = titulo + '/' + gasto[i][0]
+    }
+
+    res.render('pages/gastos_detalhados_home.ejs',{dados:titulo})
+})
+
+app.post('/gastos_detalhados', async (req, res) => {
+    let gasto = await funções_orçamento_campinas.gastos_campinas(0,req.body.botaoClicado)
+    console.log(gasto)
+    res.render("pages/mostrar_gastos_detalhados.ejs",{titulo:req.body.botaoClicado,dados:gasto})
 })
 
 

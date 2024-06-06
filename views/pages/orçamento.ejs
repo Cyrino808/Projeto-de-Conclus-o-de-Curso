@@ -5,20 +5,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Orçamento da cidade de Campinas-SP</title>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        button {
+            margin-bottom: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        #chartContainer, #chartContainer2 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            max-width: 1500px;
+            height: 700px;
+            margin: 20px auto;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+    </style>
     <script type="text/javascript">
-        // Carrega a biblioteca de visualização do Google Charts
         google.charts.load('current', {'packages':['corechart']});
         
-        // Define uma função callback para ser chamada quando a biblioteca for carregada
         google.charts.setOnLoadCallback(drawChart);
         google.charts.setOnLoadCallback(drawChart2);
 
         function drawChart() {
-            // Converte a string de renda em um array
             let gasto = "<%= gasto %>";
             gasto = gasto.split(",");
 
-            // Cria um array de dados para o gráfico
             let dataArray = [['Tipo de Renda', 'Valor']];
             for (let i = 0; i < gasto.length; i += 2) {
                 let titulo = gasto[i] === "OUTROS" ? "Other" : gasto[i];
@@ -28,34 +66,27 @@
                 }
             }
 
-            // Converte o array de dados em um DataTable do Google Charts
             let data = google.visualization.arrayToDataTable(dataArray);
 
-            // Define as opções do gráfico
             let options = {
                 title: 'Gasto detalhado da prefeitura de Campinas em 2023',
                 width: 1500,
                 height: 700,
                 pieHole: 0.4,
-                // Força a exibição de todos os rótulos, evitando que o Google Charts crie "Other"
                 pieSliceText: 'label', 
                 legend: { position: 'right', alignment: 'center' },
                 chartArea: { left: 100, top: 100, width: '80%', height: '80%' },
                 tooltip: { trigger: 'selection' }
             };
 
-            // Cria e desenha o gráfico de pizza
             let chart = new google.visualization.PieChart(document.getElementById('chartContainer'));
             chart.draw(data, options);
         }
 
         function drawChart2() {
-            // Converte a string de renda em um array
             let renda = "<%= renda %>";
             renda = renda.split(",");
 
-
-            // Cria um array de dados para o gráfico
             let dataArray = [['Tipo de Gasto', 'Valor']];
             for (let i = 0; i < renda.length; i += 2) {
                 let titulo = renda[i] === "OUTROS" ? "Other" : renda[i];
@@ -65,32 +96,30 @@
                 }
             }
 
-            // Converte o array de dados em um DataTable do Google Charts
             let data = google.visualization.arrayToDataTable(dataArray);
 
-            // Define as opções do gráfico
             let options = {
                 title: 'Renda detalhada da prefeitura de Campinas em 2023',
                 width: 1500,
                 height: 700,
                 pieHole: 0.4,
-                // Força a exibição de todos os rótulos, evitando que o Google Charts crie "Other"
                 pieSliceText: 'label', 
                 legend: { position: 'right', alignment: 'center' },
                 chartArea: { left: 100, top: 100, width: '80%', height: '80%' },
                 tooltip: { trigger: 'selection' }
             };
 
-            // Cria e desenha o gráfico de pizza
             let chart = new google.visualization.PieChart(document.getElementById('chartContainer2'));
             chart.draw(data, options);
         }
     </script>
 </head>
 <body>
-    <h1>A renda detalhada da prefeitura de Campinas em 2023</h1>
-    <div id="chartContainer" style="width: 1500px; height: 700px;"></div>
-    <br>
-    <div id="chartContainer2" style="width: 1500px; height: 700px;"></div>
+    <form action="/orcamento" method="post"> 
+        <h1>Orçamento da cidade de Campinas-SP em 2023</h1>
+        <button type="submit" id="gastos" name="gastos">Gastos Detalhados</button>
+        <div id="chartContainer"></div>
+        <div id="chartContainer2"></div>
+    </form>
 </body>
 </html>
