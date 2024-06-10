@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Senadores</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .input-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .input-container input {
+            width: 300px;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        #resultList {
+            list-style-type: none;
+            padding: 0;
+            margin-top: 20px;
+            width: 100%;
+            max-width: 400px;
+        }
+        #resultList li {
+            background-color: #fff;
+            margin: 5px 0;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        #resultList li:hover {
+            background-color: #e0e0e0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Buscar senadores por nome, partido ou estado</h1>
+    <div class="input-container">
+        <input type="text" id="nameInput" placeholder="Digite o nome do senador" onkeyup="filterSenadores()">
+        <input type="text" id="partyInput" placeholder="Digite a sigla do partido" onkeyup="filterSenadores()">
+        <input type="text" id="stateInput" placeholder="Digite a sigla do estado" onkeyup="filterSenadores()">
+    </div>
+    <ul id="resultList"></ul>
+
+    <!-- Formulário com campo oculto para capturar a seleção do usuário -->
+    <form id="senadorForm" action="/senadores_home" method="post">
+        <input type="hidden" id="senador_nome" name="senador_nome" value="">
+    </form>
+
+    <script>
+        let senadores = "<%= dados %>"; 
+        senadores = senadores.split(',');
+        let senadores_formatado = [];
+
+        for (let i = 0; i < senadores.length; i++) {
+            let aux1 = senadores[i].split('!');
+            if(aux1){
+                senadores_formatado.push({
+                nome: aux1[0].trim(),
+                siglaPartido: aux1[1].trim(),
+                siglaEstado: aux1[2].trim()
+            });
+            }           
+        }
+
+        function filterSenadores() {
+            var nameInput = document.getElementById('nameInput').value.toUpperCase();
+            var partyInput = document.getElementById('partyInput').value.toUpperCase();
+            var stateInput = document.getElementById('stateInput').value.toUpperCase();
+            var resultList = document.getElementById('resultList');
+
+            resultList.innerHTML = ''; // Clear previous results
+
+            // Filter senadors by nome and partido
+            senadores_formatado.forEach(function(senador) {
+                if (senador.nome.toUpperCase().includes(nameInput) && senador.siglaPartido.toUpperCase().includes(partyInput) && senador.siglaEstado.toUpperCase().includes(stateInput)) {
+                    var li = document.createElement('li');
+                    li.textContent = senador.nome + ' - ' + senador.siglaPartido + ' - ' + senador.siglaEstado ;
+                    li.onclick = function() {
+                        document.getElementById('senador_nome').value = senador.nome; // Set hidden field value
+                        // Optionally submit the form here or do other actions
+                        document.getElementById('senadorForm').submit();
+                        //alert('Selecionado: ' + senador.nome); // Just for demonstration
+                    };
+                    resultList.appendChild(li);
+                }
+            });
+        }
+    </script>
+</body>
+</html>

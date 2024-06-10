@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gastos do Deputado</title>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        h4 {
+            background-color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            width: fit-content;
+            margin-bottom: 10px;
+        }
+        #chart_div {
+            width: 80%;
+            max-width: 1200px;
+            height: 600px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <h1>Estes foram os gastos do senador <%= nome %></h1>
+    <h4 id="totalGastos2023"></h4>
+    <div id="chart_div"></div>
+</body>
+<script>
+    // Dados recebidos do servidor
+    let gastos = "<%= dados %>";
+    let total = "<%= total %>";
+    gastos = gastos.split(',')
+    
+    // Processamento do total
+    total = parseInt(total);
+    total = total.toLocaleString('en-US', {
+        minimumFractionDigits: 2,
+        maximumFractionDigits: 2
+    });
+    document.getElementById('totalGastos2023').textContent = `Total dos Gastos 2023: R$ ${total}`;
+    
+    // Carregando a Google Charts Library
+    google.charts.load('current', {'packages':['corechart']});
+    google.charts.setOnLoadCallback(drawChart);
+    
+    function drawChart() {
+        // Conversão da string de dados em JSON
+        
+        // Criação da tabela de dados
+        let data = new google.visualization.DataTable();
+        data.addColumn('string', 'Categoria');
+        data.addColumn('number', 'Valor');
+        
+        for(let i=0;i<gastos.length;i++){
+            let parts = gastos[i].split('/');
+            let titulo = parts[0];
+            let valor = parseFloat(parts[1]);
+            data.addRow([titulo, valor]);
+        }
+            
+       
+        
+        // Definição das opções do gráfico
+        let options = {
+            title: 'Gastos por Categoria',
+            hAxis: {
+                title: 'Categoria'
+            },
+            vAxis: {
+                title: 'Valor (R$)'
+            },
+            chartArea: {width: '70%'},
+            bars: 'vertical',
+            legend: { position: 'none' },
+        };
+        
+        // Desenho do gráfico
+        let chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));
+        chart.draw(data, options);
+    }
+</script>
+</html>

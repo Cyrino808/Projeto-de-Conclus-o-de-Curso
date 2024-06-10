@@ -1,0 +1,1003 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+<title>Recursos Utilizados por
+	Alan Rick em
+	2023 - Transparência e Prestação de Contas</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="author" content="Senado Federal" />
+
+<link rel="shortcut icon" type="image/x-icon"
+	href="/transparencia/img/senado/favicon.ico" />
+<link rel="icon" type="image/png"
+	href="/transparencia/img/senado/icones-tablet/16x16.png" />
+<link rel="apple-touch-icon" type="image/png"
+	href="/transparencia/img/senado/icones-tablet/114x114.png" />
+<link rel="apple-touch-icon-precomposed" type="image/png"
+	href="/transparencia/img/senado/icones-tablet/96x96.png" />
+
+<link rel="stylesheet" type="text/css"
+	href="/transparencia/lib/bootstrap-2.3.2/css/bootstrap.min-282663d1dc8a60dcef58304c09005aa5.css" />
+<link rel="stylesheet" type="text/css"
+	href="/transparencia/lib/bootstrap-2.3.2/css/bootstrap-responsive-d2c30d07a98d50e945570bf32c56435f.css" />
+<link rel="stylesheet" type="text/css"
+	href="/transparencia/lib/shell/css/shell-b0aaf685987835264626af667fc80597.css" />
+<link rel="stylesheet" type="text/css"
+	href="/transparencia/lib/essencial/fat-1282afbf332d5327ecb1ae75e9f114b7.css" />
+<link rel="stylesheet" type="text/css"
+	href="/transparencia/lib/shell/css/fix-aui-e66c089b905efe6fed9373f7316201e0.css" />
+<link rel="stylesheet" type="text/css"
+	href="/transparencia/lib/shell/css/painel-ffedaf873ba1ce691e8dbb61f73db776.css" />
+<link rel="stylesheet" type="text/css"
+	href="/transparencia/lib/shell/css/panel-6ad856905c386078b7078dd6b9382fb7.css" />
+<link rel="stylesheet" type="text/css"
+	href="/transparencia/lib/shell/css/titulos-d964796b4642a6c84d84357451b6adb1.css" />
+<link rel="stylesheet" type="text/css"
+	href="/transparencia/css/font-awesome/css/font-awesome-2d53b06f292dcb355b5e1a39ec065054.css" />
+<link rel="stylesheet" type="text/css"
+	href="/transparencia/lib/font-awesome/5.15.4/css/all.min-ecd507b3125edc4d2a03aa6ae5d07da9.css" />
+<link rel="stylesheet" type="text/css"
+	href="/transparencia/lib/bootstrap-datepicker/bootstrap-datepicker-1ff9dc961628101b7a2c5fd77c66ecc3.css" />
+<link rel="stylesheet" type="text/css"
+	href="/transparencia/lib/jstree/themes/default/style-ec61aa001430a9bf505b7842e4d7a05f.css" />
+<link rel="stylesheet" type="text/css"
+	href="/transparencia/css/transparencia-b38552e3a7ab9158e75264daff60dde2.css" />
+<link rel="stylesheet" type="text/css" href="/transparencia/css/senadores-50ea51b3abf043bd5fad8a378db09b5d.css" />
+<link rel="stylesheet" type="text/css"
+	href="/transparencia/lib/essencial-2020/css/essencial-2a517bbd35b9c42efee45151245150c8.css" />
+<link rel="stylesheet" type="text/css"
+	href="/transparencia/lib/essencial-2020/css/essencial-fix-bs2-e09537266d2f37581f77ef345b0a0d29.css" />
+
+		
+			<script>
+				window.ga = window.ga || function() {
+					(ga.q = ga.q || []).push(arguments)
+				};
+				ga.l = +new Date;
+				ga('create', 'UA-27295293-6', 'auto');
+				ga('create', 'UA-101435193-1', 'auto', 'global', {
+					'alwaysSendReferrer' : true
+				});
+				ga('send', 'pageview');
+				ga('global.send', 'pageview');
+			</script>
+			<script async="async"
+				src="https://www.google-analytics.com/analytics.js"></script>
+			<!-- Google tag (gtag.js) -->
+			<script async src="https://www.googletagmanager.com/gtag/js?id=G-CW3ZH25XMK"></script>
+			<script>
+				window.dataLayer = window.dataLayer || [];
+				function gtag(){dataLayer.push(arguments);}
+				gtag('js', new Date());
+				gtag('config', 'G-CW3ZH25XMK');
+			</script>
+		
+	
+
+<meta name="description"
+	content="Resumo de recursos utilizados por [[Alan Rick]] em	[[2023]]" />
+<meta name="keywords"
+	content="senado federal, transparência, despesas, senadores" />
+
+	
+		
+	
+		<meta name="robots" content="index, follow" />
+		
+		<meta name="sf_ano" content="2023" />
+		<meta name="sf_senador"
+			content="Alan Rick" />
+	
+
+	
+
+</head>
+<body class="">
+	<a class="sr-only" href="#conteudoPrincipal">Ir para conteúdo
+		principal</a>
+	<div class="sf-wrapper">
+   <div class="js-sidebar-mountpoint" data-url="https://www12.senado.leg.br/hpsenado/wssidebar.json"></div>
+</div>
+	<div class="sf-wrapper">
+	<nav class="Triad navbar_global">
+		<div>
+			<button class="btn btn-lg btn-secondary js-sidebar-action"
+				id="jstoggle" type="button">
+				<i class="fas fa-bars"></i><span class="u-hideLower title-n">
+					Menu</span>
+			</button>
+		</div>
+		<div><a class="navbar_global-brand" href="https://www.senado.leg.br" title="Senado Federal"><img 
+			src="https://www.senado.leg.br/noticias/essencial/images/senado.svg" 
+			alt="Senado Federal" /></a>
+		</div>
+		<div>
+			<div class="Rail Rail--fenced u-hideLower">
+				<a class="js-vlibras" role="button" title="acessibilidade">
+					<img src="https://www.senado.leg.br/noticias/essencial/images/hands.svg" width="25px" /></a><a 
+					class="link link-deep"
+					href="https://www12.senado.leg.br/institucional/responsabilidade-social/acessibilidade/pages/acessibilidade-no-portal-do-senado">Acessibilidade</a><a
+					class="link link-deep"
+					href="http://www12.senado.gov.br/institucional/falecomosenado">Fale
+					com o Senado</a>
+			</div>
+			<a class="btn btn-lg btn-secondary u-hideUpper"
+				href="http://www12.senado.gov.br/institucional/falecomosenado"><i
+				class="fas fa-phone"></i></a>
+		</div>
+	</nav>
+</div>
+	<div class="sf-wrapper">
+	<div class="menu-local">
+		<div class="pt-2">
+			<a class="nav_control-title d-none" href="#" title="Logo Portal"></a>
+			<div class="nav_control-title">
+				<h1><a href="https://www12.senado.leg.br/transparencia">Transparência e Prestação de Contas</a>
+					<span class="next-title">
+						<a href ="https://www25.senado.leg.br/web/transparencia/sen">Senadores</a>
+					</span>
+				</h1>
+			</div>
+		</div>
+		<button class="btn_control-res btn btn-tertiary btn-lg" type="button"
+			data-toggle="collapse.se" data-target="#menu-local__form"
+			aria-controls="menu-local__form" aria-expanded="false"
+			aria-label="Exibe busca">
+			<i class="fas fa-search"></i>
+		</button>
+		<form class="menu-local__form collapse" id="menu-local__form"
+			method="GET" action="https://www6g.senado.leg.br/busca/">
+			<input type="hidden" name="portal" value="Transparência" />
+			<div class="search-wrapper">
+				<input class="form-control search-out" type="search" name="q"
+					placeholder="Buscar" />
+				<button class="search-btn" type="submit">
+					<i class="fas fa-search"></i>
+				</button>
+			</div>
+		</form>
+	</div>
+</div>
+	<div class="sf-wrapper">
+	<nav class="navbar navbar_control navbar-expand-lg navbar--sf">
+		<div class="navbar-toggler navbar-toggler--sf" role="button"
+			data-toggle="collapse.se" data-target="#js-navbar-dropdown"
+			aria-controls="js-navbar-dropdown" aria-expanded="false"
+			aria-label="Exibe navegação">
+			<button class="btn btn-secondary">
+				<i class="fas fa-bars"></i>
+			</button>
+			<div class="ml-2">MENU DESTA SEÇÃO</div>
+		</div>
+		<div class="collapse navbar-collapse-se" id="js-navbar-dropdown">
+			<ul class="navbar-nav navbar-nav--sf">
+				<li class="nav-item"><a class="link link--nav"
+					href="https://www25.senado.leg.br/web/transparencia/sen">Senadores</a></li>
+				<li class="nav-item"><a class="link link--nav"
+					href="https://www12.senado.leg.br/transparencia/gestgov/HP-gestao-e-governanca">Gestão
+						e Governança</a></li>
+				<li class="nav-item"><a class="link link--nav"
+					href="https://www12.senado.leg.br/transparencia/licitacoes-e-contratos/licitacoes-e-contratos">Licitações
+						e Contratos</a></li>
+				<li class="nav-item"><a class="link link--nav"
+					href="https://www12.senado.leg.br/transparencia/rh/HP-recursos-humanos">Gestão
+						de Pessoas</a></li>
+				<li class="nav-item"><a class="link link--nav"
+					href="https://www12.senado.leg.br/transparencia/orcamento-e-financas/orcamento-e-financas">Orçamento
+						e Finanças</a></li>
+				<li class="nav-item"><a class="link link--nav"
+					href="https://www12.senado.leg.br/dados-abertos">Dados Abertos</a></li>
+				<li class="nav-item dropdown"><a
+					class="link link--nav dropdown-toggle" id="js-menu-1" href="#"
+					data-toggle="dropdown.se" aria-haspopup="true"
+					aria-expanded="false">Mais</a>
+					<div class="dropdown-menu dropdown-menu--sf"
+						aria-labelledby="js-menu-1">
+						<a class="dropdown-item"
+							href="https://www12.senado.leg.br/transparencia/leg/legislacao-relacionada">Legislação
+							Relacionada</a> <a class="dropdown-item"
+							href="https://www12.senado.leg.br/transparencia/indice-de-transparencia-legislativa">Índice
+							de Transparência </a> <a class="dropdown-item"
+							href="https://www12.senado.leg.br/perguntas-frequentes">Perguntas
+							Frequentes</a> <a class="dropdown-item"
+							href="https://www12.senado.leg.br/transparencia/ctcs/conselho-de-transparencia">Conselho
+							de Transparencia</a> <a class="dropdown-item"
+                            href="https://www12.senado.leg.br/transparencia/sobre-1">Transparência Pública</a>
+					</div></li>
+			</ul>
+		</div>
+	</nav>
+</div>
+
+	<div class="sf-component">
+		<div class="sf-container">
+			<ol class="Breadcrumbs">
+				<li> <a
+						href="https://www.senado.leg.br/transparencia/">Transparência e Prestação de Contas</a>
+				 </li>
+				<li> <a
+						href="https://www25.senado.leg.br/web/transparencia/sen/">Senadores</a>
+				 </li>
+				<li class="active"> Alan Rick</li>
+			</ol>
+		</div>
+	</div>
+	<div class="aui">
+			<!-- fragmento de quadro do senador -->
+			
+				<section class="conteudoBackground">
+		<div class="ProfileSenadores">
+			<div class="container bg">
+				<div class="conteudo row">
+					<div class="span12">
+						<div class="head">
+							<div class="span8 margin_ajust">
+								<h1>
+									<span>Alan Rick - AC</span>
+									<img class="sf-senador-bandeira-uf"
+										src="https://www.senado.leg.br/senadores/img/bandeiras/AC_p.gif"
+										alt="AC" />
+									 
+									
+										<br />
+										<small> 
+												Bloco Parlamentar Democracia
+												
+										-
+										UNIÃO
+												(3° Vice-líder)
+											 
+										</small>
+									
+								</h1>
+							</div>
+							<div class="span4 margin_ajust">
+								
+									<div class="text-right periodo">Período 2023-2031</div>
+								
+							</div>
+						</div>
+					</div>
+					<div class="clearFix"></div>
+					<div class="span12">
+						<div class="body">
+							<div class="span3 margin_ajust">
+								<div class="foto">
+									<img
+										src="https://www.senado.leg.br/senadores/img/fotos-oficiais/senador5672.jpg"
+										alt="Alan Rick" style="width: 240px;" />
+								</div>
+							</div>
+							<div class="span9 margin_ajust">
+								<div class="row">
+									<div class="span9">
+										<div class="bgblackOpacity">
+											<div class="dadosPessoais">
+												<h2>Dados Pessoais</h2>
+												<dl class="dl-horizontal">
+													<dt>Nome civil:</dt>
+													<dd>Alan Rick Miranda</dd>
+
+													<dt>Data de Nascimento:</dt>
+													<dd>23/10/1976</dd>
+
+													
+
+													
+														<dt>Naturalidade:</dt>
+														<dd>
+															Rio Branco
+															(AC)
+														</dd>
+													
+
+													
+														
+															<dt>Gabinete:</dt>
+															<dd>Senado Federal Anexo 2   Ala Teotônio Vilela Gabinete 05</dd>
+														
+														
+															<dt>Telefones:</dt>
+															<dd>(61) 3303-6333</dd>
+														
+
+														
+
+														
+															<dt>E-mail:</dt>
+															<dd>
+																<a href="mailto:sen.alanrick@senado.leg.br">sen.alanrick@senado.leg.br</a>
+															</dd>
+														
+
+														
+														
+															
+																
+																	<dt>Escritório de apoio:</dt>
+																	<dd>RUA BOM DESTINO, 90. APTº 102. ISAURA PARENTE, RIO BRANCO, AC. CEP:69918-360</dd>
+																	
+																	
+																
+															
+														
+													
+												</dl>
+											</div>
+											<div class="botaoNavegacao">
+												<a class="btn btn-mini btn-default" href="https://www25.senado.leg.br/web/atividade/materias/-/materia/autor/5672/p/1"
+													title="Proposições">Proposições</a> <a
+													class="btn btn-mini btn-default" href="https://www25.senado.leg.br/web/atividade/pronunciamentos/-/p/parlamentar/5672"
+													title="Pronunciamentos">Pronunciamentos</a>
+												
+													<a class="btn btn-mini btn-default" href="https://www25.senado.leg.br/web/atividade/materias/-/materia/relatadas/5672/p/1"
+														title="Relatorias">Relatorias</a>
+													<a class="btn btn-mini btn-default" href="https://www25.senado.leg.br/web/atividade/votacoes-nominais/-/v/parlamentar/Alan Rick Miranda"
+														title="Votações">Votações</a>
+												
+												<a class="btn btn-default" role="button"
+													href="https://www25.senado.leg.br/web/senadores/senador/-/perfil/5672"> <i
+													class="icon-plus-sign"></i> Página Institucional
+												</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- FIM CONTAINER BG -->
+		</div>
+	</section>
+			
+		</div>
+	<section id="conteudoPrincipal" class="conteudo aui">
+		<div class="container">
+			<div>
+					<div class="row-fluid">
+						<aside class="span3">
+							<div class="painel sen-painel-lateral">
+								<div class="painel-cabecalho">Informações Relacionadas</div>
+								<div class="painel-corpo">
+									<ul class="unstyled">
+										<li><a href="https://www.senado.leg.br/senadores">Portal
+												dos Senadores</a></li>
+										
+										<li><a
+											href="https://www12.senado.leg.br/transparencia/leg/legislacao-relacionada">Legislação
+												Relacionada</a></li>
+									</ul>
+								</div>
+								<div class="painel-rodape"></div>
+							</div>
+						</aside>
+						<div id="conteudo_transparencia"
+							class="span9 margin_ajust transp-sen-conteudo-principal">
+							
+					<h1 class="sen-conteudo-interno">Recursos Utilizados em 2023</h1>
+					<div class="row">
+						<div class="sen-barra-filtro pull-right">
+							<div class="form-inline">
+								
+		<div class="btn-group">
+			<button type="button" class="btn btn-default dropdown-toggle"
+				data-toggle="dropdown">
+				Ver outro ano&nbsp;<span class="caret"></span>
+			</button>
+			<ul class="dropdown-menu" role="menu">
+				<li><a
+					href="https://www6g.senado.leg.br/transparencia/sen/5672/?ano=2023#conteudo_transparencia">2023</a></li>
+				<li><a
+					href="https://www6g.senado.leg.br/transparencia/sen/5672/?ano=2024#conteudo_transparencia">2024</a></li>
+				
+				
+				
+			</ul>
+			&nbsp;
+		</div>
+	
+							</div>
+						</div>
+					</div>
+					<div class="clear"></div>
+					<div class="sen-conteudo-interno">
+						
+		
+	
+						
+							
+			<div class="accordion" id="accordion-ceaps">
+				<div class="accordion-group accordion-caret">
+					<div class="accordion-heading">
+						<a class="accordion-toggle" data-toggle="collapse"
+							data-parent="accordion-ceaps"
+							href="#collapse-ceaps">Cotas para Exercício da Atividade Parlamentar</a>
+					</div>
+					<div id="collapse-ceaps" class="accordion-body collapse in">
+						<div class="accordion-inner">
+							
+							<table class="table table-striped">
+								<caption class="sr-only">Valores de Cotas para Exercício da Atividade Parlamentar</caption>
+								<thead>
+									<tr>
+										<th>Recurso</th>
+										<th class="valor">Valor</th>
+									</tr>
+								</thead>
+								<tbody>
+									
+										
+										
+											<tr>
+												<td
+													title="Aluguel de imóveis para escritório político, compreendendo despesas concernentes a eles."><i
+													class="icon-angle-right"></i>&nbsp;
+													Aluguel de imóveis para escritório político&nbsp;
+													
+												</td>
+												<td class="valor"> 
+													<a href="ceaps/1/?ano=2023#conteudo_transparencia"
+														title="Ver detalhe mês a mês de Aluguel de imóveis para escritório político"><span>51.339,79</span> 
+													</a>
+													
+													 
+												</td>
+											</tr>
+											
+												
+											
+										
+											<tr>
+												<td
+													title="Aquisição de material de consumo para uso no escritório político, inclusive aquisição ou locação de software, despesas postais, aquisição de publicações, locação de móveis e de equipamentos."><i
+													class="icon-angle-right"></i>&nbsp;
+													Aquisição de material de consumo&nbsp;
+													
+												</td>
+												<td class="valor"> 
+													<a href="ceaps/2/?ano=2023#conteudo_transparencia"
+														title="Ver detalhe mês a mês de Aquisição de material de consumo"><span>0,00</span> 
+													</a>
+													
+													 
+												</td>
+											</tr>
+											
+												
+											
+										
+											<tr>
+												<td
+													title="Locomoção, hospedagem, alimentação, combustíveis e lubrificantes"><i
+													class="icon-angle-right"></i>&nbsp;
+													Locomoção, hospedagem, alimentação e combustíveis&nbsp;
+													
+												</td>
+												<td class="valor"> 
+													<a href="ceaps/3/?ano=2023#conteudo_transparencia"
+														title="Ver detalhe mês a mês de Locomoção, hospedagem, alimentação e combustíveis"><span>115.157,15</span> 
+													</a>
+													
+													 
+												</td>
+											</tr>
+											
+												
+											
+										
+											<tr>
+												<td
+													title="Contratação de consultorias, assessorias, pesquisas, trabalhos técnicos e outros serviços de apoio ao exercício do mandato parlamentar"><i
+													class="icon-angle-right"></i>&nbsp;
+													Contratação de serviços de apoio ao parlamentar&nbsp;
+													
+												</td>
+												<td class="valor"> 
+													<a href="ceaps/4/?ano=2023#conteudo_transparencia"
+														title="Ver detalhe mês a mês de Contratação de serviços de apoio ao parlamentar"><span>73.993,18</span> 
+													</a>
+													
+													 
+												</td>
+											</tr>
+											
+												
+											
+										
+											<tr>
+												<td
+													title="Divulgação da atividade parlamentar"><i
+													class="icon-angle-right"></i>&nbsp;
+													Divulgação da atividade parlamentar&nbsp;
+													
+												</td>
+												<td class="valor"> 
+													<a href="ceaps/5/?ano=2023#conteudo_transparencia"
+														title="Ver detalhe mês a mês de Divulgação da atividade parlamentar"><span>151.500,00</span> 
+													</a>
+													
+													 
+												</td>
+											</tr>
+											
+												
+											
+										
+											<tr>
+												<td
+													title="Passagens aéreas, aquáticas e terrestres nacionais"><i
+													class="icon-angle-right"></i>&nbsp;
+													Passagens aéreas, aquáticas e terrestres nacionais&nbsp;
+													
+												</td>
+												<td class="valor"> 
+													<a href="ceaps/8/?ano=2023#conteudo_transparencia"
+														title="Ver detalhe mês a mês de Passagens aéreas, aquáticas e terrestres nacionais"><span>41.267,63</span> 
+													</a>
+													
+													 
+												</td>
+											</tr>
+											
+												
+											
+										
+											<tr>
+												<td
+													title="Serviços de Segurança Privada"><i
+													class="icon-angle-right"></i>&nbsp;
+													Serviços de Segurança Privada&nbsp;
+													
+												</td>
+												<td class="valor"> 
+													<a href="ceaps/9/?ano=2023#conteudo_transparencia"
+														title="Ver detalhe mês a mês de Serviços de Segurança Privada"><span>0,00</span> 
+													</a>
+													
+													 
+												</td>
+											</tr>
+											
+												
+											
+										
+										
+										
+										
+										
+									
+								</tbody>
+								<tfoot>
+									<tr>
+										<td>Total</td>
+										<td class="valor">433.257,75</td>
+									</tr>
+								</tfoot>
+							</table>
+							<span>Sistema Cotas - Dados de 06/06/2024 (Secretaria de Finanças, Orçamento e Contabilidade)</span>	
+						</div>
+					</div>
+				</div>
+			</div>
+		
+							
+			<div class="accordion" id="accordion-outros-gastos">
+				<div class="accordion-group accordion-caret">
+					<div class="accordion-heading">
+						<a class="accordion-toggle" data-toggle="collapse"
+							data-parent="accordion-outros-gastos"
+							href="#collapse-outros-gastos">Gastos não inclusos nas Cotas para Exercício da Atividade Parlamentar</a>
+					</div>
+					<div id="collapse-outros-gastos" class="accordion-body collapse in">
+						<div class="accordion-inner">
+							
+							<table class="table table-striped">
+								<caption class="sr-only">Valores de Gastos não inclusos nas Cotas para Exercício da Atividade Parlamentar</caption>
+								<thead>
+									<tr>
+										<th>Recurso</th>
+										<th class="valor">Valor</th>
+									</tr>
+								</thead>
+								<tbody>
+									
+										<tr class="sen_tabela_linha_grupo">
+											<td
+												title="Despesas com Viagens Oficiais">Viagens Oficiais&nbsp;</td>
+											<td class="valor"> 56.675,11</td>
+										</tr>
+										
+											<tr>
+												<td
+													title="Diárias relacionadas a Viagens Oficiais"><i
+													class="icon-angle-right"></i>&nbsp;
+													Diárias&nbsp;
+												<div class="fonte" style="text-align:justify;">
+													<small> Obs.: As informações aqui disponibilizadas são atualizadas conforme o recebimento pelo Senado dos dados do Sistema Integrado de Administração Financeira do Governo Federal - SIAFI. Ordens bancárias de pagamento de diárias são exibidas após dois dias úteis da emissão. Ordens bancárias canceladas em dia posterior ao da emissão deixam de ser exibidas após o recebimento pelo Senado das informações de cancelamento do SIAFI. </small>
+												</div>	
+												</td>
+												<td class="valor"> 
+													<a href="viagens/1/?ano=2023#conteudo_transparencia"
+														title="Ver detalhe mês a mês de Diárias"><span>56.675,11</span> 
+													</a>
+													
+													 
+												</td>
+											</tr>
+											
+												
+											
+										
+											<tr>
+												<td
+													title="Ressarcimento de passagens relacionadas a Viagens Oficiais"><i
+													class="icon-angle-right"></i>&nbsp;
+													Ressarcimento de Passagens&nbsp;
+													
+												</td>
+												<td class="valor"> 
+													<a href="viagens/2/?ano=2023#conteudo_transparencia"
+														title="Ver detalhe mês a mês de Ressarcimento de Passagens"><span>0,00</span> 
+													</a>
+													
+													 
+												</td>
+											</tr>
+											
+												<tr>
+													<td><i class="icon-angle-right"></i>&nbsp;&nbsp;Passagens emitidas</td>
+													<td class="valor"> 
+														<a href="https://www25.senado.leg.br/documents/16011/129587092/5672.pdf" target="_blank"> Consulte </a>
+														 
+													</td>
+												</tr>
+											
+										
+										
+										
+										
+										
+									
+										<tr class="sen_tabela_linha_grupo">
+											<td
+												title="Consumo de Material do Gabinete">Consumo de Material&nbsp;</td>
+											<td class="valor"> 7.496,63</td>
+										</tr>
+										
+											<tr>
+												<td
+													title="Combustíveis"><i
+													class="icon-angle-right"></i>&nbsp;
+													Combustíveis&nbsp;
+													
+												</td>
+												<td class="valor"> 
+													
+													<a href="consumo/1/?ano=2023#conteudo_transparencia"
+														title="Ver detalhe mês a mês de Combustíveis"><span>0,00</span> 
+													</a>
+													 
+												</td>
+											</tr>
+											
+												
+											
+										
+											<tr>
+												<td
+													title="Outros materiais"><i
+													class="icon-angle-right"></i>&nbsp;
+													Outros materiais&nbsp;
+													
+												</td>
+												<td class="valor"> 
+													<a href="consumo/2/?ano=2023#conteudo_transparencia"
+														title="Ver detalhe mês a mês de Outros materiais"><span>7.496,63</span> 
+													</a>
+													
+													 
+												</td>
+											</tr>
+											
+												
+											
+										
+										
+										
+										
+										
+									
+										<tr class="sen_tabela_linha_grupo">
+											<td
+												title="Cotas Postais">Correios&nbsp;</td>
+											<td class="valor"><a
+												href="correios/?ano=2023#conteudo_transparencia"
+												title="Ver detalhe mês a mês de Correios">16.678,34</a> </td>
+										</tr>
+										
+											
+											
+												
+											
+										
+										
+										
+										
+										
+									
+										<tr class="sen_tabela_linha_grupo">
+											<td
+												title="Cotas para Impulsionamento em Mídias Sociais do Senador">Cotas para Impulsionamento em Mídias Sociais&nbsp;</td>
+											<td class="valor"><a
+												href="cims/?ano=2023#conteudo_transparencia"
+												title="Ver detalhe mês a mês de Cotas para Impulsionamento em Mídias Sociais">4.257,10</a> </td>
+										</tr>
+										
+											
+											
+												
+											
+										
+										
+										
+										
+										
+									
+										<tr class="sen_tabela_linha_grupo">
+											<td
+												title="Aquisição de passagens aéreas (ATC 2/2023)">Aquisição de passagens aéreas (ATC 2/2023)&nbsp;</td>
+											<td class="valor"><a
+												href="trechos/?ano=2023#conteudo_transparencia"
+												title="Ver detalhe mês a mês de Aquisição de passagens aéreas (ATC 2/2023)">98.021,83</a> </td>
+										</tr>
+										
+											
+											
+												
+											
+										
+										
+										
+										
+										
+									
+								</tbody>
+								<tfoot>
+									<tr>
+										<td>Total</td>
+										<td class="valor">183.129,01</td>
+									</tr>
+								</tfoot>
+							</table>
+								
+						</div>
+					</div>
+				</div>
+			</div>
+		
+							<div class="accordion" id="accordion-outros">
+								<div class="accordion-group accordion-caret">
+									<div class="accordion-heading">
+										<a class="accordion-toggle" data-toggle="collapse"
+											data-parent="#accordion-outros" href="#collapse-outros">
+											Benefícios </a>
+									</div>
+									<div id="collapse-outros" class="accordion-body collapse in">
+										<div class="accordion-inner">
+											
+
+											<table class="table table-striped">
+												<caption class="sr-only">Uso de Benefícios</caption>
+												<thead>
+													<tr>
+														<th>Benefício</th>
+														<th>Utilização</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>Auxílio-Moradia</td>
+														<td>
+																
+																	
+																	Não utilizou
+																
+																
+															 </td>
+													</tr>
+													<tr>
+														<td>Imóvel Funcional</td>
+														<td>
+																
+																	
+																		<a href="beneficios/?numeroFuncional=396750&amp;ano=2023"
+																			data-toggle="modal" data-target="#modalBeneficios">Utilizou (em 11 meses)</a>
+																	
+																	
+																
+																
+															 </td>
+													</tr>
+												</tbody>
+											</table>
+											<div id="modalBeneficios" class="modal hide fade"
+												tabindex="-1" role="dialog"
+												aria-labelledby="modalBeneficiosLabel" aria-hidden="true">
+												<div class="modal-header">
+													<button type="button" class="close" data-dismiss="modal"
+														aria-hidden="true">×</button>
+													<h3 id="modalBeneficiosLabel">Uso de Benefícios</h3>
+												</div>
+												<div class="modal-body"></div>
+												<div class="modal-footer">
+													<button class="btn btn-primary" data-dismiss="modal"
+														aria-hidden="true">Fechar</button>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="accordion" id="accordion-pessoal">
+								<div class="accordion-group accordion-caret">
+									<div class="accordion-heading">
+										<a class="accordion-toggle" data-toggle="collapse"
+											data-parent="#accordion-pessoal" href="#collapse-pessoal">
+											Pessoal </a>
+									</div>
+									<div id="collapse-pessoal" class="accordion-body collapse in">
+										<div class="accordion-inner">
+											
+											<table class="table table-striped">
+												<caption class="sr-only">Quantidade de
+													funcionários por local e vínculo</caption>
+												<thead>
+													<tr>
+														<th>Local / Vínculo</th>
+														<th class="valor">Quantidade</th>
+													</tr>
+												</thead>
+												<tbody>
+													
+														<tr class="sen_tabela_linha_grupo">
+															<td><span>Gabinete</span></td>
+															<td class="valor"><a href="pessoal/?local=gabinete&amp;ano=2023&amp;vinculo=TODOS#conteudo_transparencia"
+																title="Ver lista de funcionários no Gabinete">
+																	26 pessoa(s)
+
+															</a></td>
+														</tr>
+														<tr>
+															<td><i class="icon-angle-right"></i>&nbsp;<span>Comissionados</span></td>
+															<td class="valor"><a
+																href="pessoal/?local=gabinete&amp;ano=2023&amp;vinculo=COMISSIONADO#conteudo_transparencia"
+																title="Ver lista de Comissionados no Gabinete">
+																	24 pessoa(s)
+															</a></td>
+														</tr>
+														<tr>
+															<td><i class="icon-angle-right"></i>&nbsp;<span>Efetivos</span></td>
+															<td class="valor"><a
+																href="pessoal/?local=gabinete&amp;ano=2023&amp;vinculo=EFETIVO#conteudo_transparencia"
+																title="Ver lista de Efetivos no Gabinete">
+																	2 pessoa(s)
+															</a></td>
+														</tr>
+													
+														<tr class="sen_tabela_linha_grupo">
+															<td><span>Escritório(s) de Apoio</span></td>
+															<td class="valor"><a href="pessoal/?local=escritorio&amp;ano=2023&amp;vinculo=TODOS#conteudo_transparencia"
+																title="Ver lista de funcionários no Escritório(s) de Apoio">
+																	15 pessoa(s)
+
+															</a></td>
+														</tr>
+														<tr>
+															<td><i class="icon-angle-right"></i>&nbsp;<span>Comissionados</span></td>
+															<td class="valor"><a
+																href="pessoal/?local=escritorio&amp;ano=2023&amp;vinculo=COMISSIONADO#conteudo_transparencia"
+																title="Ver lista de Comissionados no Escritório(s) de Apoio">
+																	15 pessoa(s)
+															</a></td>
+														</tr>
+													
+													
+													
+													
+													
+												</tbody>
+											</table>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="accordion" id="accordion-subsidios">
+								<div class="accordion-group accordion-caret">
+									<div class="accordion-heading">
+										<a class="accordion-toggle" data-toggle="collapse"
+											data-parent="#accordion-subsidios" href="#collapse-subsidios">
+											Subsídios e Aposentadoria </a>
+									</div>
+									<div id="collapse-subsidios" class="accordion-body collapse in">
+										<div class="accordion-inner">
+											
+											
+											<table class="table table-striped">
+												<caption class="sr-only">Consulta de subsídios e
+													aposentadoria</caption>
+												<thead>
+													<tr>
+														<th>Recurso</th>
+														<th>Consulta</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>Subsídios do Senador</td>
+														<td><a href="https://www.senado.leg.br/transparencia/rh/servidores/detalhe.asp?fcodigo=3842860&amp;fvinculo=1" title="Ver subsídios do Senador">Consulte</a>
+															</td>
+													</tr>
+													
+												</tbody>
+											</table>
+											Para informações de aposentadoria de Senadores, em qualquer
+											período, acesse: <a href="https://www.senado.leg.br/transparencia/rh/servidores/consulta_senadores_aposentados.asp">Proventos
+												de aposentadoria de Senadores</a>.
+										</div>
+									</div>
+								</div>
+							</div>
+						
+					</div>
+				
+						</div>
+					</div>
+				</div>
+		</div>
+	</section>
+	<div class="sf-wrapper">
+	<footer class="Footer">
+		<div class="container">
+			<div class="Triad Triad--stackable">
+				<div class="Rail gamma my-2"><a class="link link-deep--facebook" href="https://www.facebook.com/SenadoFederal" title="Facebook" target="_blank"><i class="fab fa-facebook"></i></a><a class="link link-deep--twitter" href="https://twitter.com/senadofederal" title="Twitter" target="_blank"><i class="fab fa-twitter"></i></a><a class="link link-deep--instagram" href="https://www.instagram.com/senadofederal" title="Instagram" target="_blank"><i class="fab fa-instagram"></i></a><a class="link link-deep--youtube" href="https://www.youtube.com/user/TVSenadoOficial" title="Youtube" target="_blank"><i class="fab fa-youtube"></i></a></div>
+				<div class="Rail my-2"><a href="https://www.camara.leg.br" title="Câmara dos Deputados" target="_blank"><img src="https://www.senado.leg.br/noticias/essencial/images/icon-camara.svg" alt="Câmara dos Deputados"/></a><a href="https://www.congressonacional.leg.br" title="Congresso Nacional" target="_blank"><img src="https://www.senado.leg.br/noticias/essencial/images/icon-congresso.svg" alt="Congresso Nacional"/></a><a href="https://www.tcu.gov.br" title="Tribunal de Contas da União" target="_blank"><img src="https://www.senado.leg.br/noticias/essencial/images/icon-tcu.svg" alt="Tribunal de Contas da União"/></a></div>
+				<div class="Rail Rail--fenced my-2"><a class="link link-deep" href="https://www12.senado.leg.br/institucional/carta-de-servicos/en/carta-de-servicos">ENGLISH</a><a class="link link-deep" href="https://www12.senado.leg.br/institucional/carta-de-servicos/es/carta-de-servicos">ESPAÑOL</a><a class="link link-deep" href="https://www12.senado.leg.br/institucional/carta-de-servicos/fr/carta-de-servicos">FRANÇAIS</a></div>
+			</div>
+			<div class="divider my-2"></div>
+			<div class="Triad Triad--stackable">
+				<div class="my-2"><a class="link link-deep" href="https://intranet.senado.leg.br" title="Intranet"><i class="fas fa-lock mr-1"></i>  Intranet</a></div>
+				<div class="Rail Rail--fenced Rail--stackable my-2"><a class="link link-deep" href="https://www12.senado.leg.br/institucional/pessoas/pessoas">Servidor efetivo</a><a class="link link-deep" href="https://www12.senado.leg.br/institucional/pessoas/pessoas">Servidor comissionado</a><a class="link link-deep" href="https://www12.senado.leg.br/institucional/pessoas/pessoas">Servidor aposentado</a><a class="link link-deep" href="https://www12.senado.leg.br/institucional/pessoas/pessoas">Pensionista</a></div>
+				<div class="my-2"><a class="link link-deep" href="https://www12.senado.leg.br/institucional/falecomosenado" title="fale com o Senado"><i class="fas fa-phone u-flip-x mr-1"></i>  Fale com o Senado</a></div>
+			</div>
+			<div class="divider my-2"></div>
+			<div class="d-flex justify-content-xl-center"><span class="my-2">Senado Federal - Praça dos Três Poderes - Brasília DF - CEP 70165-900 |  <span class="text-nowrap">Telefone: 0800 0 61 2211</span></span></div>
+		</div>
+	</footer>
+</div>
+
+
+	<script type="text/javascript"
+		src="/transparencia/lib/jquery/jquery-1.12.4.min-4f252523d4af0b478c810c2547a63e19.js"></script>
+	<script type="text/javascript" src="/transparencia/lib/bootstrap-2.3.2/js/bootstrap.min-bed31fb959612a0a77d8e87b9d0b3683.js"></script>
+	<script type="text/javascript"
+		src="/transparencia/lib/bootstrap-datepicker/bootstrap-datepicker-c4d744b227a1abd042c92f04a2a310e1.js"></script>
+	<script type="text/javascript"
+		src="/transparencia/lib/bootstrap-datepicker/locales/bootstrap-datepicker.pt-BR-2b702f10c90440a1bd15133ae9768bd0.js"></script>
+	<script type="text/javascript"
+		src="/transparencia/lib/essencial-2020/js/essencial-0528b73cc844243c240e73b71c2427aa.js"></script>
+	<script type="text/javascript" src="/transparencia/lib/jstree/jstree.min-533a703cea4af4a8420a6d1dac814701.js"></script>
+	<script type="text/javascript" src="/transparencia/js/tooltip-05f7c672357109ce997e219ca757eada.js"></script>
+	<script type="text/javascript" src="/transparencia/js/arvore-orgao-f6b4694f232c53b617f5b7ffe8ca5e63.js"></script>
+	<script type="text/javascript" src="/transparencia/js/funcoes-servidores-18a29ecd4f5ace7e3e4c5da430b0c9b0.js"></script>
+	
+		
+	
+	<div style="display: none;">versão: portal-transparencia - 1.13.0</div>
+</body>
+
+</html>

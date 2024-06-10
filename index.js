@@ -12,6 +12,7 @@ import * as fs from "fs"
 import funções_ocr from './ocr.cjs';
 import funções_orçamento_campinas from './orçamento_campinas.cjs';
 import senador from './senadores.cjs';
+import dados_cidades from './cidades.cjs';
 //funções.pega_imagem()
 const app = express();
 const server = http.createServer(app);
@@ -346,7 +347,6 @@ let lista_aeroportos = [
     }
 ]
 
-
 const cota_parlamentar = [
     {estado :"AC", valor: 50426.26},				
     {estado :"AL", valor: 46737.90},				
@@ -544,8 +544,6 @@ async function geraAno(ano,codigoIBGE){
     return deputados
     }
     
-    
-
     async function fetchData(url) {
         try {
             const { data } = await axios.get(url);
@@ -778,9 +776,47 @@ app.get('/lista_vereadores',async (req, res) => {
     res.redirect(`/gastos_vereador?vereador=${encodeURIComponent(nomeVereador)}&id=${encodeURIComponent(idVereador)}`);
 })
 
+app.get('/senadores_home',async (req, res) => { 
+    res.render('pages/lista_senadores.ejs',{dados:await senador.senadores_formatado()});
+})
+
+app.post('/senadores_home',async (req, res) => { 
+    res.redirect(`/gastos_senador?nome=${encodeURIComponent(req.body.senador_nome)}`);
+})
+
+app.get('/gastos_senador',async (req, res) => { 
+
+    const gastos = await senador.main(req.query.nome)
+    let dados = []
+    let total = 0
+    for(let i=0;i<gastos.length;i++){
+        if(i<15){
+            let numero_formatado = formata_numero(gastos[i].valor)
+            total+= parseFloat(numero_formatado)
+            dados.push(retira_virgula(gastos[i].recurso) + "/" + numero_formatado)
+
+        }
+    }
+
+    res.render('pages/gastos_senador.ejs',{nome:req.query.nome,dados:dados,total:total.toFixed(2)});
+})
+
+function formata_numero(inputString) {
+    // Troca todas as vírgulas por pontos
+    let replacedString = inputString.replace(/\./g, '');
+    // Remove todos os pontos
+    let finalString = replacedString.replace(/,/g, '.'); 
+    return finalString;
+}
+
+function retira_virgula(inputString) {
+    let finalString = inputString.replace(/,/g, ''); 
+    return finalString;
+}
+
 app.get('/gastos_vereador', async (req, res) => {
     const nomeVereador = req.query.vereador; // Captura o nome do vereador a partir da query string
-    const idVereador = req.query.id; // Captura o nome do vereador a partir da query string
+    const idVereador = req.query.id; // Captura o id do vereador a partir da query string
     const gastos_combustivel = await pegasGastos(idVereador)
     res.render('pages/gastos_vereador.ejs',{nome_vereador:nomeVereador,combustivel:gastos_combustivel});
 })
@@ -799,6 +835,8 @@ app.get('/',async (req, res) => {
         return res.redirect("/home_cidades")
        }else if(req.body.hasOwnProperty("orcamento")){
         return res.redirect("/orcamento")
+       }else if(req.body.hasOwnProperty("senado")){
+        return res.redirect("/senadores_home")
        }
 })
 
@@ -830,28 +868,17 @@ app.get('/home_cidades',async (req, res) => {
   })
 
   app.post('/home_cidades', async (req, res) => {
-    //Pega o nome da cidade que o usuario digitou
     const cidade = removerAcentos(req.body.cidade)
-    //Pega a sigla do estado que o usuario digitou
-    const sigla = await sigla_nome_estados(req.body.estado)
-    //Formata o nome da cidade para poder procurar na tabela do IBGE
+    const sigla = req.body.estado
     const cidade_formatada = cidade.toLocaleUpperCase() + " " + "(" + sigla + ")" 
-    //Manda as informações coletadas pela URL para a rota "/cidade" utilizar
-    res.redirect(`/cidade?cidade=${encodeURIComponent(cidade_formatada)}&sigla=${encodeURIComponent(sigla)}`); 
-
-})
-
-app.get('/cidade',async (req, res) => {
-    
-    let dados_população = await população_cidade(req.query.cidade) 
-    let dados_pib = await PIB_cidade(req.query.cidade) 
+    let dados_população = await população_cidade(cidade_formatada) 
+    let dados_pib = await PIB_cidade(cidade_formatada) 
     let nome = dados_população.shift()
     dados_pib.shift()
     let crescimento_cidade_po = ((dados_população[18] -   dados_população[0]) / dados_população[0])*100
     let crescimento_cidade_pib = ((dados_pib[19] -   dados_pib[0]) / dados_pib[0])*100
-    //Pegas as informações do pais, estado e região da cidade digitada
-    const população = await comparações_população(crescimento_cidade_po, req.query.sigla) 
-    const pib = await comparações_pib(crescimento_cidade_pib,req.query.sigla) 
+    const população = await comparações_população(crescimento_cidade_po,sigla) 
+    const pib = await comparações_pib(crescimento_cidade_pib,sigla) 
     res.render('pages/cidade.ejs',
         {nome:nome,
         dados_pib:dados_pib,
@@ -865,7 +892,8 @@ app.get('/cidade',async (req, res) => {
         comparacao_regiao:população[1],
         comparacao_estado:população[2]
     });
-  })
+
+})
 
 app.get('/orcamento', async (req, res) => {
     let renda = await funções_orçamento_campinas.receitas_campinas()
